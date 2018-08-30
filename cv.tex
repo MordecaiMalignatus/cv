@@ -1,0 +1,184 @@
+\documentclass[a4paper]{article}
+
+\usepackage{hyperref}
+\usepackage[bottom=5em]{geometry}
+
+% Comment the following lines to use the default Computer Modern font
+% instead of the Palatino font provided by the mathpazo package.
+% Remove the 'osf' bit if you don't like the old style figures.
+% \usepackage[T1]{fontenc}
+% \usepackage[sc,osf]{mathpazo}
+
+% Set your name here
+\def\name{Steffen Reindl}
+
+% Replace this with a link to your CV if you like, or set it empty
+% (as in \def\footerlink{}) to remove the link in the footer:
+\def\footerlink{https://blog.malignat.us/cv}
+
+% The following metadata will show up in the PDF properties
+\hypersetup{
+  colorlinks = true,
+  urlcolor = blue,
+  pdfauthor = {\name},
+  pdfkeywords = {computer science, curriculum vitae, Steffen Reindl},
+  pdftitle = {\name: Curriculum Vitae},
+  pdfsubject = {Curriculum Vitae},
+  pdfpagemode = UseNone
+}
+
+\geometry{
+  body={6.5in, 8.5in},
+  left=1.0in,
+  top=1.25in
+}
+
+% Customize page headers
+\pagestyle{myheadings}
+\markright{\name}
+\thispagestyle{empty}
+
+% Custom section fonts
+\usepackage{sectsty}
+\sectionfont{\rmfamily\mdseries\Large\scshape}
+\subsectionfont{\rmfamily\mdseries\itshape\large\scshape}
+
+% Other possible font commands include:
+% \ttfamily for teletype,
+% \sffamily for sans serif,
+% \bfseries for bold,
+% \scshape for small caps,
+% \normalsize, \large, \Large, \LARGE sizes.
+
+% Don't indent paragraphs.
+\setlength\parindent{0em}
+
+% Make lists without bullets
+\renewenvironment{itemize}{
+  \begin{list}{}{
+    \setlength{\leftmargin}{1.5em}
+  }
+}{
+  \end{list}
+}
+
+% Listing environment with less spacing
+\newenvironment{packed}{
+\begin{itemize}
+  \setlength{\itemsep}{0pt}
+  \setlength{\parskip}{0pt}
+  \setlength{\parsep}{0pt}
+}{\end{itemize}}
+
+\renewcommand\arraystretch{1.15}% (MyValue=1.0 is for standard spacing)
+
+\begin{document}
+
+{\huge \name}
+\vspace{0.25in}
+
+\begin{minipage}{0.45\linewidth}
+  Naupliastr. 28\\
+  81547, Munich\\
+  Germany
+\end{minipage}
+\begin{minipage}{0.45\linewidth}
+  \begin{tabular}{ll}
+    Phone: & On request. \\
+    Email: & \href{mailto:stc@malignat.us}{\tt stc@malignat.us} \\
+    Portfolio: & \href{https://github.com/MordecaiMalignatus/}{\tt github.com/MordecaiMalignatus/}
+  \end{tabular}
+\end{minipage}
+
+\section*{Skills and Experience}
+
+\subsection*{Programming Languages}
+\begin{tabular}{ l p{14cm} }
+Scala & Go-to language for implementing services, specifically the Typelevel ecosystem,
+also possessing experience of Akka-HTTP.\\
+Python & Proficiency in building robust services and rapid prototyping,
+experience in basic machine learning (Gensim/Keras) and datascience.\\
+Elixir/OTP & Experience in building highly-available services to be used as
+building blocks in an infrastructure, also some experience using Phoenix as
+web-development backend.\\
+Haskell & Experience in building highly-correct libraries and algorithm
+implementations, and using it for prototyping and subsequent scaling.\\
+Rust & Experience in creating CLI tools that do specific, small things well. \\
+\end{tabular}
+
+\subsection*{Technologies}
+\begin{tabular}{ l p{11.7cm} }
+ Functional Programming & I take cues and ideas from maths in order to reduce the
+amount of bugs and complexity in my code.\\
+Systems Design & I design systems I build for failure, which results in simple,
+but reliable architectures, easy to maintain and expand.\\
+Metrics & I like for services to have sensible and `actionable' metrics, for
+example with DataDog \\
+Infrastructure & I use tools like Terraform and CloudFormation to
+construct all my infrastructure from day one. \\
+AWS & I have used AWS in a professional setting to construct, load-balance and
+maintain complex, distributed services. \\
+Tooling & I am very fond of having good tools to work with, and will create and
+maintain missing tools that simplify work to be done. \\
+\end{tabular}
+
+\section*{Employment}
+
+\begin{itemize}
+\item Backend Software Engineer at Ryte, 2017 {\textendash}
+  present.
+        \begin{packed}
+            \item Worked in an agile team developing Scala microservices.
+            \item Conducted R\&D in a small team, developing algorithms,
+              libraries and prototypes for the company in a variety of languages
+              and technologies.
+            \item Created and implemented information extraction algorithms,
+              such as an evolution on PageRank.
+            \item Used machine learning (Gensim/word2vec) to categorize and
+              improve website content.
+        \end{packed}
+\end{itemize}
+
+\section*{Open-source work and self study}
+
+\begin{itemize}
+  \item Various small CLI tools oriented around managing documents, data and
+    notes. (\href{https://github.com/MordecaiMalignatus?utf8=\%E2\%9C\%93\&tab=repositories\&q=\&type=public\&language=}{Github})
+  \item Currently working through \href{http://haskellbook.com}{\emph{Haskell From First Principles}}
+\item \href{https://github.com/LivewareProblems/gravitas}{Gravitas}
+  \begin{packed}
+    \item Cloud provisioning and compliance tool, for monitoring and controlling
+      cloud changes.
+    \item Positioned as alternative to Hashicorp's Terraform (eventually)
+    \item Written in Elixir and Haskell
+  \end{packed}
+\end{itemize}
+
+\section*{Education}
+
+\begin{itemize}
+  \item Incomplete B.Sc. Computer Science, Technical University of Munich (2016
+    {\textendash} 2018)
+
+  \item Abitur (A-levels), Asam Gymnasium, Munich
+	\begin{packed}
+	\item Average Grade: 2.8
+	\item Excelled in computer science and English.
+	\end{packed}
+\end{itemize}
+
+
+\section*{References}
+Available on request.
+
+\vfill
+
+% Footer
+\begin{center}
+  \begin{footnotesize}
+    Last updated: \today \\
+    %\href{\footerlink}{\texttt{\footerlink}}
+  \end{footnotesize}
+\end{center}
+
+\end{document}
