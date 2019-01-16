@@ -3,9 +3,6 @@
 \usepackage{hyperref}
 \usepackage[bottom=5em]{geometry}
 
-% Comment the following lines to use the default Computer Modern font
-% instead of the Palatino font provided by the mathpazo package.
-% Remove the 'osf' bit if you don't like the old style figures.
 % \usepackage[T1]{fontenc}
 % \usepackage[sc,osf]{mathpazo}
 
@@ -17,7 +14,6 @@
 %   - Rename Systems Design to Systems Architecture
 % Inspiration: https://dianaolympos.github.io
 
-% Set your name here
 \def\name{Steffen Reindl}
 
 % Replace this with a link to your CV if you like, or set it empty
@@ -41,7 +37,6 @@
   top=1.25in
 }
 
-% Customize page headers
 \pagestyle{myheadings}
 \markright{\name}
 \thispagestyle{empty}
@@ -78,7 +73,7 @@
   \setlength{\parsep}{0pt}
 }{\end{itemize}}
 
-\renewcommand\arraystretch{1.15}% (MyValue=1.0 is for standard spacing)
+\renewcommand\arraystretch{1.0}% (MyValue=1.0 is for standard spacing)
 
 \begin{document}
 
@@ -102,42 +97,44 @@
 
 \subsection*{Programming Languages}
 \begin{tabular}{ l p{14cm} }
-Scala & Go-to language for implementing services, specifically the Typelevel ecosystem,
+Scala & Go-to language for implementing services, specifically the Typelevel ecosystem;
 also \linebreak possessing experience of Akka-HTTP.\\
 Python & Proficiency in building robust services and rapid prototyping,
-experience in basic machine learning (Gensim/Keras) and data science.\\
+experience in basic machine learning (Gensim/Keras), and data science.\\
 Elixir/OTP & Experience in building highly-available services to be used as
-building blocks in an \linebreak infrastructure, also some experience using Phoenix as
+building blocks in an \linebreak infrastructure; also some experience using Phoenix as
 web-development backend.\\
-Haskell & Experience in building highly-correct libraries and algorithm
+Haskell & Experience in building correct libraries and algorithm
 implementations, and using it for prototyping and subsequent scaling.\\
-Rust & Experience in creating CLI tools that do specific, small things well. \\
+Rust & Experience in creating CLI tools that do specific, small things well, as
+well as agents/daemons for metrics. Also created a desktop application using
+Rust and {\tt web-view} \\
 \end{tabular}
 
 \subsection*{Technologies}
 \begin{tabular}{l p{12cm} }
-Metrics & I like for services to have sensible and `actionable' metrics, for
-example with DataDog \\
+Metrics & What isn't measureable is not actionable. Before we can change/correct
+anything, we need metrics.\\
 Infrastructure \linebreak automation & I use tools like Terraform and CloudFormation to
 construct all my \linebreak infrastructure from day one. \\
 Amazon Web Services & I have used AWS in a professional setting to construct, load-balance and
 \linebreak maintain complex, distributed services. \\
-Databases & I have primarily worked with PostgreSQL, and variations of SQL
-databases. NoSQL databases like Redis have also been used. \\
+Databases & I have primarily worked with PostgreSQL and variations of SQL
+databases. I have also used NoSQL databases like Redis. \\
 CI/CD & I have experience in setting up the software, process and tooling needed
 to continuously test and deploy services and products.\\
-Docker & I have experience packaging services to be used with Docker, and
+Docker & I have experience packaging services to be used with Docker and
 integrating Docker into the build process.
 \end{tabular}
 
-\subsection*{Interests}
+\subsection*{Interests \& Focuses}
 \begin{tabular}{l p{12cm}}
 Functional Programming & I take cues and ideas from maths in order to reduce the
 amount of bugs and complexity in my code.\\
 Systems Design & I design systems I build for failure, which results in simple,
 but reliable \linebreak architectures, easy to maintain and expand.\\
 Tooling & I am very fond of having good tools to work with, and will create and
-maintain missing tools that simplify work to be done. \\
+maintain tools that simplify work to be done. \\
 \end{tabular}
 
 \section*{Employment}
@@ -146,14 +143,14 @@ maintain missing tools that simplify work to be done. \\
 \item Backend Software Engineer at Ryte, 2017 {\textendash}
   present.
         \begin{itemize}
-            \item Worked in an agile team developing Scala microservices.
+            \item Working in an agile team developing Scala microservices.
             \item Conducted R\&D in a small team, developing algorithms,
               libraries and prototypes for the company in a variety of languages
-              and technologies.
-            \item Created and implemented information extraction algorithms,
-              such as an evolution on PageRank.
-            \item Used machine learning (Gensim/word2vec) to categorize and
-              improve website content.
+              and technologies, where I used machine learning (Gensim/word2vec)
+              to categorize and improve website content.
+            \item Maintained a scala web crawler central to the company,
+              distributed over YARN and Flink, the outpout of which is analyzed
+              by a Scala service written in Spark, running on AWS EMR.
         \end{itemize}
 \end{itemize}
 
@@ -168,20 +165,15 @@ maintain missing tools that simplify work to be done. \\
         achieved. These notes are then grouped by day and archived in a central
         location.
     \end{packed}
-  \item NewNote / {\tt nn} \href{https://github.com/MordecaiMalignatus/nn}{(Github)}
+  \item{\href{https://github.com/MordecaiMalignatus/path-of-beancounting}{Path
+      of Beancounting}}
     \begin{packed}
-      \item Created to solve the problem of littered files that describe
-        in-the-moment ideas without having any means for later evaluation. This
-        instead centralises every such note taken.
+    \item Light-weight desktop application for the game Path Of Exile, which
+      gathers statistics from various sources, and displays them to the
+      user. Most of it is written in Rust, while the front-end is written in
+      {\tt web-view} with {\tt react.js}.
     \end{packed}
   \item Currently working through \href{http://haskellbook.com}{\emph{Haskell From First Principles}}
-%% \item \href{https://github.com/LivewareProblems/gravitas}{Gravitas}
-%%   \begin{packed}
-%%     \item Cloud provisioning and compliance tool, for monitoring and controlling
-%%       cloud changes.
-%%     \item Positioned as alternative to Hashicorp's Terraform (eventually)
-%%     \item Written in Elixir and Haskell
-%%   \end{packed}
 \end{itemize}
 
 \section*{Education}
@@ -193,7 +185,6 @@ maintain missing tools that simplify work to be done. \\
   \item Abitur (A-levels), Asam Gymnasium, Munich
 	\begin{packed}
 	\item Average Grade: 2.8
-	\item Excelled in computer science and English.
 	\end{packed}
 \end{itemize}
 
