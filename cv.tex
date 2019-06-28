@@ -4,7 +4,6 @@
 \usepackage[bottom=5em]{geometry}
 
 % \usepackage[T1]{fontenc}
-% \usepackage[sc,osf]{mathpazo}
 
 % Thomas' Suggestions:
 % - Add "executive summary" to aid CTOs reviewing CVs, detailiing:
@@ -61,7 +60,8 @@
 % Make lists without bullets
 \renewenvironment{itemize}{
   \begin{list}{}{
-    \setlength{\leftmargin}{1.5em}
+      \setlength{\leftmargin}{1.5em}
+      \setlength{\itemsep}{10pt}
   }
 }{
   \end{list}
@@ -106,7 +106,9 @@
               subsequently improved to support Javascript rendering and crawling
               single-page applications.
             \item Planned and implemented a personal development programme for
-              engineering.
+              engineering, involving space for self-directed learning,
+              opportunity to conduct R\&D. This led to a number of useful tools
+              being developed.
         \end{itemize}
 \end{itemize}
 
@@ -149,7 +151,7 @@ integrating Docker into the build process.
 \subsection*{Interests \& Focuses}
 \begin{tabular}{ p{2.75cm} | p{14cm} }
   Metrics & What isn't measureable isn't actionable. I add metrics and logs to
-any service I write, as well as supporting infrastructure like dashboards and
+any service I write, as well as supporting infrastructure such as dashboards and
 log aggregation. \\
 Systems Design & I design systems for failure, which results in simple,
 but reliable architectures, easy to maintain and expand.\\
