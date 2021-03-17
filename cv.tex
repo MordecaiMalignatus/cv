@@ -61,7 +61,7 @@
 \renewenvironment{itemize}{
   \begin{list}{}{
       \setlength{\leftmargin}{1.5em}
-      \setlength{\itemsep}{10pt}
+      \setlength{\itemsep}{5pt}
   }
 }{
   \end{list}
@@ -83,9 +83,9 @@
 \vspace{0.25in}
 
 \begin{minipage}{0.45\linewidth}
-  102 Reeveston Dr.\\
-  61705 Bloomington, IL\\
-  United States of America
+  Hansastr. 1a, \\
+  13409 Berlin \\
+  Germany
 \end{minipage}
 \begin{minipage}{0.45\linewidth}
   \begin{tabular}{ll}
@@ -98,24 +98,28 @@
 \section*{Skills and Experience}
 
 \begin{itemize}
-\item \textbf{Liveware Problems}, Co-Founder, \textbf{March 2020 {\textendash} Current}
+\item \textbf{PriceHubble}, Site Reliability Engineer, \textbf{November 2020 {\textendash} Current}
   \begin{itemize}
-    \item Founded and started \href{https://haruspex.dev}{Haruspex} for insight
-     into CI pipelines.
+    \item Maintained and developed tools for a large-scale Kubernetes
+      cluster. This served as the basis of infrastructure to product teams.
+    \item Started a cultural shift towards developer empowerment and autonomy,
+      away from a classic Ops/Dev split. The incentives and final structure were
+      modelled after the classic SRE literature.
+    \item Transitioned company to new BI infrastructure based on GCP's
+      BigQuery.
   \end{itemize}
 \item \textbf{Ryte}, Backend Software Engineer, \textbf{May 2017 {\textendash} Sep 2019}
-        \begin{itemize}
-
-            \item Maintained a Scala web crawler central to the company,
-              distributed over YARN and Flink, analyzed by a Scala service
-              written in Spark. This system is running on AWS EMR, and was
-              subsequently improved to support Javascript rendering and crawling
-              single-page applications by controlling Chromium.
-            \item Planned and implemented a personal development programme for
-              engineering, involving space for self-directed learning,
-              opportunity to conduct R\&D. This led to a number of useful tools
-              being developed.
-        \end{itemize}
+   \begin{itemize}
+      \item Maintained a Scala web crawler central to the company,
+        distributed over YARN and Flink, analyzed by a Scala service
+        written in Spark. This system is running on AWS EMR, and was
+        subsequently improved to support Javascript rendering and crawling
+        single-page applications by controlling Chromium.
+      \item Planned and implemented a personal development programme for
+        engineering, involving space for self-directed learning,
+        opportunity to conduct R\&D. This led to a number of useful tools
+        being developed.
+  \end{itemize}
 \end{itemize}
 
 \section*{Education}
@@ -125,44 +129,33 @@
     {\textendash} 2018)
 \end{itemize}
 
-\subsection*{Programming Languages}
-\begin{tabular}{ p{2.75cm} | p{14cm} }
-Scala & Go-to language for implementing services, specifically the Akka ecosystem;
-also possessing experience of the Typelevel family of libraries.\\
-Python & Proficiency in building robust services and rapid prototyping \\
-Elixir/OTP & Experience in building services for personal projects, and
-connecting services in a reliable manner. Haruspex is built in Elixir.\\
-Rust & Experience in creating CLI tools as well as agents/daemons for
-metrics. Also created a desktop application using Rust such as
-\href{https://github.com/mordecaimalignatus/rsass}{\tt rsass}. \\
-\end{tabular}
-
 \subsection*{Technologies}
 \begin{tabular}{ p{2.75cm} | p{14cm} }
-Infrastructure & I use tools like Terraform and CloudFormation to
-provision the infrastructure needed. \\
-AWS & I have used Amazon Web Services to power large-scale crawlers and analysis
-pipelines. \\
-Databases & Primarily worked with PostgreSQL and variations of SQL
-databases. In addition I also made heavy use of PrestoDB and DynamoDB.\\
-Hadoop & Created and maintained applications on top of Apache Flink,
-Apache Spark and YARN.\\
-CI/CD & Experience in setting up the software, process and tooling needed
-to continuously test and deploy services and products.\\
-Containers & Experience in building and delivering containers, and orchestrating
-them with ECS.
+  Infrastructure & As much as I can I rely on Infrastructure as Code, through
+                   whatever tool is most appropriate, for example Terraform,
+                   CloudFormation, Helm Charts, ConfigConnector or the Google
+                   Deployment Manager. \\
+  Kubernetes & I have maintained and developed for several clusters. Istio and
+               Helm were also used.\\
+  Platforms & I have used AWS and GCP to power large-scale crawlers, analysis pipelines and ML
+              training clusters. \\
+  Databases & Primarily worked with PostgreSQL and variations of SQL
+              databases. In addition I also made heavy use of BigQuery and DynamoDB.\\
+  CI/CD & Experience in setting up the software, process and tooling needed
+          to continuously test and deploy services and products.\\
+  Programming Languages & Confident engineering skills in in Python, Scala, Rust and Elixir.
 \end{tabular}
 
 \subsection*{Interests \& Focuses}
 \begin{tabular}{ p{2.75cm} | p{14cm} }
   Observability & Modern, complex systems are hard to grasp and harder to change
-  successfully, and so having insight into what is happening in production is
-  invaluable. I build systems as transparent and observable as I
-  can. \\
-Systems Design \& Resilience & I design systems for failure, which results in simple,
-but reliable architectures, easy to maintain and expand.\\
-Tooling & I am very fond of having good tools to work with, and will create and
-maintain tools that enable and simplify future changes. \\
+                  successfully, and so having insight into what is happening in production is
+                  invaluable. I build systems as transparent and observable as I
+                  can. \\
+  Systems Design \& Resilience & I design systems for failure, which results in simple,
+                                 but reliable architectures, easy to maintain and expand.\\
+  Tooling & I am very fond of having good tools to work with, and will create and
+            maintain tools that enable and simplify future changes. \\
 \end{tabular}
 
 \vfill
