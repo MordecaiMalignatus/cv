@@ -5,14 +5,6 @@
 
 % \usepackage[T1]{fontenc}
 
-% Thomas' Suggestions:
-% - Add "executive summary" to aid CTOs reviewing CVs, detailiing:
-%   - How I got to where I am now
-%   - What I do right now.
-%   - What my personal interests are for programming.
-%   - Rename Systems Design to Systems Architecture
-% Inspiration: https://dianaolympos.github.io
-
 \def\name{Steffen Reindl}
 
 % The following metadata will show up in the PDF properties
@@ -20,7 +12,7 @@
   colorlinks = true,
   urlcolor = blue,
   pdfauthor = {\name},
-  pdfkeywords = {computer science, curriculum vitae, Steffen Reindl},
+  pdfkeywords = {computer science, curriculum vitae, \name, CV},
   pdftitle = {\name: Curriculum Vitae},
   pdfsubject = {Curriculum Vitae},
   pdfpagemode = UseNone
@@ -28,10 +20,9 @@
 
 \geometry{
   a4paper,
-  %% body={6.5in, 10in},
-  right=0.75in,
-  left=0.75in,
-  top=0.5in
+  right=0.9in,
+  left=0.9in,
+  top=0.6in
 }
 
 \pagestyle{myheadings}
@@ -43,13 +34,6 @@
 \sectionfont{\rmfamily\mdseries\Large\scshape}
 \subsectionfont{\rmfamily\mdseries\itshape\large\scshape}
 
-% Other possible font commands include:
-% \ttfamily for teletype,
-% \sffamily for sans serif,
-% \bfseries for bold,
-% \scshape for small caps,
-% \normalsize, \large, \Large, \LARGE sizes.
-
 % Don't indent paragraphs.
 \setlength\parindent{0em}
 
@@ -57,10 +41,10 @@
 \renewenvironment{itemize}{
   \begin{list}{}{
       \setlength{\leftmargin}{1em}
-      \setlength{\itemsep}{3pt}
+      \setlength{\itemsep}{4pt}
   }
 }{
-  \end{list}
+\end{list}
 }
 
 % Listing environment with less spacing
@@ -71,36 +55,43 @@
   \setlength{\parsep}{0pt}
 }{\end{itemize}}
 
-\renewcommand\arraystretch{1.0}% (MyValue=1.0 is for standard spacing)
+% Increase `tabular` row spacing.
+\renewcommand\arraystretch{1.4}
 
 \begin{document}
 
-{\huge \name}
-\vspace{0.25in}
-
-\begin{minipage}{0.45\linewidth}
-  Hansastr. 1a, \\
-  13409 Berlin \\
-  Germany
+\begin{minipage}{0.30\linewidth}
+  {\huge \name}
+  %\vspace{0.25in}
 \end{minipage}
-\begin{minipage}{0.45\linewidth}
-  \begin{tabular}{ll}
-    Phone: & On request. \\
-    Email: & \href{mailto:steffen@malignat.us}{\tt steffen@malignat.us} \\
-    GitHub: & \href{https://github.com/MordecaiMalignatus/}{\tt github.com/MordecaiMalignatus}
-  \end{tabular}
+\begin{minipage}{0.75\linewidth}
+  \begin{flushright}
+    Email: \href{mailto:steffen@malignat.us}{\tt steffen@malignat.us} $\Vert$
+    Portfolio: \href{https://github.com/MordecaiMalignatus/}{\tt
+      github.com/MordecaiMalignatus}
+  \end{flushright}
 \end{minipage}
 
-\section*{Skills and Experience}
+\section*{Experience}
 
 \begin{itemize}
-\item \textbf{Wayfair}, Configuration Management, Senior Platform Engineer, \textbf{July 2021 {\textendash} Current}
+\item {\large \textbf{Terramate}, Senior Software Engineer, {\footnotesize(Berlin, Germany)} \hfill \textbf{June 2023 {\textendash} November 2023}}
+  \begin{itemize}
+  \item Developing and maintaining the Terramate CLI, importing ideas from build
+    tools like Bazel and Nix to add features and improve performance.
+  \item Creating and architecting the newly-created Terramate Cloud product
+    backend, together with significant input on business and product
+    development.
+  \item Started and popularized incident reviews/retrospectives to learn from
+    things having gone wrong.
+  \end{itemize}
+\item {\large \textbf{Wayfair}, Senior Platform Engineer, {\footnotesize(Berlin, Germany)} \hfill \textbf{July 2021 {\textendash} April 2023}}
   \begin{itemize}
   \item Maintaining and developing tools for Vault, Consul and Puppet at
-    Wayfair.
+    Wayfair as part of the Configuration Management Team.
   \item Developed a unified distribution platform on top of Vault, allowing
     other developers to not worry about secret distribution. For this we also
-    built multiple interfaces.
+    built multiple interfaces for automated access and distribution.
   \item Planned, communicated and executed a several-major-versions upgrade of
     Vault with no downtime.
   \item Created and maintained developer-facing operational tools around Vault,
@@ -108,7 +99,7 @@
   \item Held multiple internal talks about the space of Resilience Engineering,
     Human Factors \& Ergonomics.
   \end{itemize}
-\item \textbf{PriceHubble}, Site Reliability Engineer, \textbf{November 2020 {\textendash} June 2021}
+\item {\large \textbf{PriceHubble}, Site Reliability Engineer, {\footnotesize(Berlin, Germany)}\hfill \textbf{November 2020 {\textendash} June 2021}}
   \begin{itemize}
     \item Maintained and developed tools for a large-scale Kubernetes
       cluster. This served as the basis of infrastructure to product teams.
@@ -118,7 +109,7 @@
     \item Transitioned company to new BI infrastructure based on GCP's
       BigQuery.
   \end{itemize}
-\item \textbf{Ryte}, Backend Software Engineer, \textbf{May 2017 {\textendash} Sep 2019}
+\item {\large \textbf{Ryte}, Backend Software Engineer, {\footnotesize(Munich, Germany)}\hfill \textbf{May 2017 {\textendash} Sep 2019}}
    \begin{itemize}
       \item Maintained a Scala web crawler central to the company,
         distributed over YARN and Flink, analyzed by a Scala service
@@ -132,25 +123,31 @@
 
 \begin{itemize}
   \item \textbf{Technical University of Munich}, Incomplete B.Sc. Computer Science,  (2016
-    {\textendash} 2018)
+    {\textendash} n2018)
 \end{itemize}
 
-\subsection*{Technologies}
+\section*{Technologies}
 \begin{tabular}{ p{3cm} | p{13.75cm} }
-  Infrastructure & As much as I can I rely on Infrastructure as Code, through
-                   whatever tool is most appropriate.\\
-  Kubernetes & I have maintained and developed for several clusters. Istio and
-               Helm were also used.\\
-  Platforms & I have used AWS and GCP to power large-scale crawlers, analysis pipelines and ML
-              training clusters. \\
+  Programming \vfill Languages & Confident engineering skills in Go,
+                                 Scala, Rust, Python, and Elixir. \\
+  Infrastructure \vfill as Code & As much as I can I rely on Infrastructure as Code, through
+                                  whatever tool is most appropriate. These include: Terraform,
+                                  Helm, CloudFormation, Puppet, Ansible, Nix. \\
+  Kubernetes & I have maintained and developed for several clusters, mostly
+               using GKE. Istio and Helm were also used.\\
+  Platforms & I have used AWS and GCP to power large-scale web crawlers, analysis pipelines and ML
+              training clusters, website back-ends and have developed additional
+              features for them based on the need of other team mates.\\
   Databases & Primarily worked with PostgreSQL and variations of SQL
-              databases. In addition I also made use of BigQuery and DynamoDB.\\
+              databases. In addition I also made use of BigQuery, DynamoDB,
+              Kafka and various caches.\\
   CI/CD & Experience in setting up the software, process and tooling needed
-          to continuously test and deploy services and products.\\
-  Programming Languages & Confident engineering skills in in Python, Go, Scala, Rust and Elixir.
+          to continuously test and deploy services and products. Ability to
+          troubleshoot flakey tests, reliability issues and aggressively taking
+          aim at problems that make engineers less confident in CI.\\
 \end{tabular}
 
-\subsection*{Interests \& Focuses}
+\section*{Interests \& Focuses}
 \begin{tabular}{ p{3cm} | p{13.75cm} }
   Observability & Modern, complex systems are hard to grasp and harder to change
                   successfully, and so having insight into what is happening in production is
@@ -159,11 +156,19 @@
   Cognitive Systems Engineering & I focus on the sociotechnical aspects of a
                                   system, rather than on either, human or
                                   computer, allowing me to optimize for the
-                                  overall functionality. \\
+                                  overall functionality. This means, for
+                                  example, designing to avoid alert blindness,
+                                  and designing to assist debugging in case of failure.\\
   Systems Design \& Resilience & I design systems for failure, which results in simple,
                                  but reliable architectures, easy to maintain and expand.\\
   Developer Tooling \& UX & I am very fond of having good tools to work with, and will create and
-            maintain tools that enable and simplify future changes. \\
+                            maintain tools that enable and simplify future
+                            changes. \\
+  Learning From \vfill Incidents & As frustrating as they are, production outages and
+                                   incidents provide valuable opportunity for learning
+                                   and improving, and as such, should not be wasted. I
+                                   tend to set up incident reviews and analyses, and
+                                   teach people how to do them. \\
 \end{tabular}
 
 \vfill
