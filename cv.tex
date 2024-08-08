@@ -2,6 +2,7 @@
 
 \usepackage{hyperref}
 \usepackage[bottom=5em]{geometry}
+\usepackage{enumitem}
 
 % \usepackage[T1]{fontenc}
 
@@ -20,9 +21,9 @@
 
 \geometry{
   a4paper,
-  right=0.9in,
-  left=0.9in,
-  top=0.6in
+  right=0.8in,
+  left=0.5in,
+  top=0.5in
 }
 
 \pagestyle{myheadings}
@@ -47,6 +48,11 @@
 \end{list}
 }
 
+\newenvironment{positionsList}{
+  \begin{itemize}
+    \setlength{\itemsep}{20pt}
+}{\end{itemize}}
+
 % Listing environment with less spacing
 \newenvironment{packed}{
 \begin{itemize}
@@ -55,7 +61,7 @@
   \setlength{\parsep}{0pt}
 }{\end{itemize}}
 
-% Increase `tabular` row spacing.
+% Increase `tabular` row spacing. Relevant for the tools/skills tables down below.
 \renewcommand\arraystretch{1.4}
 
 \begin{document}
@@ -73,8 +79,18 @@
 \end{minipage}
 
 \section*{Experience}
-
-\begin{itemize}
+\begin{positionsList}
+\item {\large \textbf{Stripe}, Senior Software Engineer, {\footnotesize(Berlin, Germany)} \hfill \textbf{February 2024 {\textendash} August 2024}}
+  \begin{itemize}
+  \item Maintained core CI infrastructure under tight constraints and SLOs,
+    built on top of AWS.\@
+  \item Improved CI UX for Stripe's developers, reducing feedback cycle times
+    and improving velocity.
+  \item Migrated Docker across several major versions, updating a core component
+    of the infrastructure with no downtimes and no notice to users.
+  \item Interfaced with several teams to hunt down complex performance issues
+    inside a distributed system.
+  \end{itemize}
 \item {\large \textbf{Terramate}, Senior Software Engineer, {\footnotesize(Berlin, Germany)} \hfill \textbf{June 2023 {\textendash} November 2023}}
   \begin{itemize}
   \item Developing and maintaining the Terramate CLI, importing ideas from build
@@ -117,30 +133,31 @@
         subsequently improved to support Javascript rendering and crawling
         single-page applications by controlling Chromium.
   \end{itemize}
-\end{itemize}
+\end{positionsList}
 
 \section*{Education}
 
 \begin{itemize}
   \item \textbf{Technical University of Munich}, Incomplete B.Sc. Computer Science,  (2016
-    {\textendash} n2018)
+    {\textendash} 2018)
 \end{itemize}
 
 \section*{Technologies}
 \begin{tabular}{ p{3cm} | p{13.75cm} }
   Programming \vfill Languages & Confident engineering skills in Go,
-                                 Scala, Rust, Python, and Elixir. \\
+                                 Ruby, Rust, Python, and Elixir. \\
   Infrastructure \vfill as Code & As much as I can I rely on Infrastructure as Code, through
                                   whatever tool is most appropriate. These include: Terraform,
                                   Helm, CloudFormation, Puppet, Ansible, Nix. \\
   Kubernetes & I have maintained and developed for several clusters, mostly
-               using GKE. Istio and Helm were also used.\\
-  Platforms & I have used AWS and GCP to power large-scale web crawlers, analysis pipelines and ML
-              training clusters, website back-ends and have developed additional
-              features for them based on the need of other team mates.\\
+               using GKE.\@Istio and Helm were also used.\\
+  Platforms & I have used AWS and GCP to power large-scale CI systems, web
+              crawlers, analysis pipelines and ML training clusters, website
+              back-ends and have developed additional features for them
+              based on the need of other team mates.\\
   Databases & Primarily worked with PostgreSQL and variations of SQL
               databases. In addition I also made use of BigQuery, DynamoDB,
-              Kafka and various caches.\\
+              MongoDB, Kafka and various caches.\\
   CI/CD & Experience in setting up the software, process and tooling needed
           to continuously test and deploy services and products. Ability to
           troubleshoot flakey tests, reliability issues and aggressively taking
